@@ -5,10 +5,11 @@ Esteban di Pietro
 
 ## Contents
 
-* /public - static directories suchs as /images
-* /routes - route files for tutorial project
-* /views - views for tutorial project
+* /public - stylesheets
+* /routes - 3 route files 
+* /views - 6 views
 * README.md - this file
-* app.js - central app file for tutorial project
-* package.json - package info for tutorial project
-"# devOps" 
+* app.js - central app file
+* package.json - package info 
+* app.dockerfile - dockerfile for the app
+* docker-compose.yml - docker compose between app and a mongoDB image
