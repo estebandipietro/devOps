@@ -9,7 +9,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - "DB_HOST=database"
+      - "DB_PORT=27017"
+      - "DB_HOST=mongo"
     depends_on:
       - mongo
   mongo:
@@ -18,8 +19,8 @@ services:
     volumes:
       - mongodata:/data/db
     environment:
-      - "MONGO_INITDB_ROOT_USERNAME: esteban"
-      - "MONGO_INITDB_ROOT_PASSWORD: 123456"
+      - "POSTGRES_USER=esteban"
+      - "POSTGRES_PASSWORD=hola1234"
     ports:
       - "27017:27017"
 volumes:
