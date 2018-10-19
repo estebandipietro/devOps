@@ -10,6 +10,7 @@ services:
 
 install:
   - npm install
+  - npm install mocha chai --save-dev
   - npm install --global mocha
   - npm install request --save-dev
 
