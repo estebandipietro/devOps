@@ -3,7 +3,8 @@ sudo: required
 
 language: node_js
 
-node_js: stable
+node_js:
+  -10
 
 services:
     -mongodb
@@ -19,5 +20,4 @@ before_script:
   - sleep 15
 
 script:
-  - npm start
   - mocha test/unit/test-pages.js
