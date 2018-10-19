@@ -10,6 +10,8 @@ services:
 
 install:
   - npm install
+  - npm install --global mocha
+  - npm install request --save-dev
 
 before_script:
   - cp .env.travis .env
