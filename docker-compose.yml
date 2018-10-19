@@ -19,8 +19,8 @@ services:
     volumes:
       - mongodata:/data/db
     environment:
-      - "POSTGRES_USER=esteban"
-      - "POSTGRES_PASSWORD=hola1234"
+      - "MONGO_INITDB_ROOT_USERNAME=esteban"
+      - "MONGO_INITDB_ROOT_PASSWORD=hola1234"
     ports:
       - "27017:27017"
 volumes:
