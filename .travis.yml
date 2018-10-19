@@ -19,4 +19,5 @@ before_script:
   - sleep 15
 
 script:
+  - npm start
   - mocha test/unit/test-pages.js
