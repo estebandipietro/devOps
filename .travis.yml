@@ -1,0 +1,19 @@
+dist: trusty
+sudo: required
+
+language: node_js
+
+node_js: stable
+
+services:
+    -mongodb
+
+install:
+  - npm install
+
+before_script:
+  - cp .env.travis .env
+  - sleep 15
+
+script:
+  - mocha test/unit/test-pages.js
