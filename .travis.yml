@@ -16,6 +16,7 @@ install:
 
 before_script:
   - cp .env.travis .env
+  - npm start
   - sleep 15
 
 script:
