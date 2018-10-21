@@ -9,7 +9,7 @@ services:
   - docker
 
 before_script:
-  - cp .env.example .env
+  - cp .env.travis .env
   - docker-compose up -d
 
 script:
