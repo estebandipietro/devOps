@@ -17,5 +17,5 @@ before_script:
 
 script:
 - docker-compose exec app mocha test/unit/test-pages.js
-- docker-compose exec app istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov
+- docker-compose exec app istanbul cover _mocha -- -u exports -R spec
 - codecov
