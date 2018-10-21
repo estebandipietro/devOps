@@ -8,14 +8,10 @@ node_js: stable
 services:
   - docker
 
-install:
-  - npm install -g codecov
-
 before_script:
   - cp .env.travis .env
   - docker-compose up -d
 
 script:
 - docker-compose exec app mocha test/unit/test-pages.js
-- docker-compose exec app node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -- -u exports -R spec test/unit/test-pages.js
-- codecov
+- docker-compose exec app node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -- -u exports -R spec test/unit/test-pages.js && codecov

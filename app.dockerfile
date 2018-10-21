@@ -7,6 +7,7 @@ RUN npm install \
     && npm install --global mocha \
     && npm install request --save-dev \
     && npm install istanbul --save-dev
+    && npm install -g codecov
 COPY . /usr/src/app
 EXPOSE 3000
 CMD ["node","./bin/www"]
