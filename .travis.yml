@@ -14,7 +14,4 @@ before_script:
 
 script:
 - docker-compose exec app mocha test/test-pages.js
-- docker-compose exec app node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -- -u exports -R spec test/test-pages.js 
-
-after_sucess:
-- docker run bash <(curl -s https://codecov.io/bash)
+- docker-compose exec app node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports -R spec test/test-pages.js --report json --report text
