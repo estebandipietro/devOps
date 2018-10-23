@@ -6,7 +6,7 @@ RUN npm install \
     && npm install mocha chai --save-dev \
     && npm install --global mocha \
     && npm install request --save-dev \
-    && npm install istanbul@1.1.0-alpha.1 --save-dev \
+    && npm install istanbul@0.4.4 --save-dev \
     && npm install --global codecov
 COPY . /usr/src/app
 EXPOSE 3000
