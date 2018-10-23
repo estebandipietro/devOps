@@ -3,12 +3,6 @@ var request = require('request');
 
 var server = require('../bin/www');
 
-it('helloworld page example', function(done) {
-    request('http://localhost:3000/helloworld' , function(error, response, body) {
-        expect(body).to.equal("<!DOCTYPE html><html><body>'Hello, World!'</body></html>");
-        done();
-    });
-});
 
 describe('pages', function(){
       it('should respond to GET',function(done){
@@ -16,6 +10,13 @@ describe('pages', function(){
           expect(response.statusCode).to.equal(200);
           done();
         });
+      });
+
+      it('helloworld page example', function(done) {
+          request('http://localhost:3000/helloworld' , function(error, response, body) {
+              expect(body).to.equal("<!DOCTYPE html><html><body>'Hello, World!'</body></html>");
+              done();
+          });
       });
 
 
