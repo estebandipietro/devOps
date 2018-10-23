@@ -7,3 +7,14 @@ it('helloworld page example', function(done) {
         done();
     });
 });
+
+describe('pages', function(){
+      it('should respond to GET',function(done){
+        request('http://localhost:3000/helloworld', function(error, response, body) {
+          expect(response).to.equal(200);
+          done();
+        });
+      });
+
+
+    });
