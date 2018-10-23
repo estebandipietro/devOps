@@ -3,7 +3,7 @@ var request = require('request');
 
 
 describe('pages', function(){
-      it('should respond to GET',function(done){
+      it('mainpage should respond without error',function(done){
         request.get('http://localhost:3000', function(error, response, body) {
           expect(response.statusCode).to.equal(200);
           done();
