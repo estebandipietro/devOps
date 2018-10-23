@@ -10,11 +10,10 @@ it('helloworld page example', function(done) {
     });
 });
 
-describe('pages', function(){
+
       it('mainpage should respond without error',function(done){
         request.get('http://localhost:3000', function(error, response, body) {
           expect(response.statusCode).to.equal(200);
           done();
         });
       });
-    });
