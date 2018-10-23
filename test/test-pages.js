@@ -1,8 +1,6 @@
 var expect  = require('chai').expect;
 var request = require('request');
 
-var server = require('../bin/www');
-
 
 describe('pages', function(){
       it('should respond to GET',function(done){
