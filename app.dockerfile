@@ -7,6 +7,7 @@ RUN npm install \
     && npm install --global mocha \
     && npm install request --save-dev \
     && npm install istanbul@0.4.4 --save-dev \
+    && npm install --global istanbul@0.4.4 \
     && npm i nyc --save-dev
 COPY . /usr/src/app
 EXPOSE 3000
