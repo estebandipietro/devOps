@@ -7,7 +7,7 @@ RUN npm install \
     && npm install --global mocha \
     && npm install request --save-dev \
     && npm install istanbul@1.0.0-alpha.2 --save-dev \
-    && npm install --global istanbul@1.0.0-alpha.2 \
+    && npm install --global istanbul@1.0.0-alpha.2 
 COPY . /usr/src/app
 EXPOSE 3000
 CMD ["node","./bin/www"]
