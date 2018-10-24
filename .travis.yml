@@ -13,6 +13,6 @@ before_script:
   - docker-compose up -d
 
 script:
-- docker-compose exec app mocha -r jscoverage -R spec test/test-pages.js
-#- docker-compose exec app istanbul cover ./node_modules/mocha/bin/_mocha -- -- -u exports -R spec test/test-pages.js
+- docker-compose exec app mocha test/test-pages.js --reporter markdown
+- docker-compose exec app istanbul cover mocha -- -u exports -R spec test/test-pages.js
 #- docker-compose exec app codecov
