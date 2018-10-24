@@ -6,9 +6,8 @@ RUN npm install \
     && npm install mocha chai --save-dev \
     && npm install --global mocha \
     && npm install request --save-dev \
-    && npm install istanbul@1.0.0-alpha.2 --save-dev \
-    && npm install --global istanbul@1.0.0-alpha.2 \
-    && npm install --save-dev babel-cli
+    && npm install istanbul@1.1.0-alpha.1 --save-dev \
+    && npm install --global istanbul@1.1.0-alpha.1
 COPY . /usr/src/app
 EXPOSE 3000
 CMD ["node","./bin/www"]
