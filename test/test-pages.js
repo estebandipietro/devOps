@@ -1,7 +1,7 @@
 var expect  = require('chai').expect;
 var request = require('request');
 
-var server = require('../bin/www');
+//var server = require('../bin/www');
 
 it('helloworld page example', function(done) {
     request('http://localhost:3000/helloworld' , function(error, response, body) {
@@ -11,9 +11,9 @@ it('helloworld page example', function(done) {
 });
 
 
-      it('mainpage should respond without error',function(done){
-        request.get('http://localhost:3000', function(error, response, body) {
-          expect(response.statusCode).to.equal(200);
-          done();
-        });
-      });
+it('mainpage should respond without error',function(done){
+  request.get('http://localhost:3000', function(error, response, body) {
+    expect(response.statusCode).to.equal(200);
+    done();
+  });
+});
