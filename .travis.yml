@@ -14,6 +14,5 @@ before_script:
 
 script:
 - docker-compose exec app mocha test/test-pages.js
-- docker-compose exec app istanbul cover ./node_modules/mocha/bin/_mocha ./test/test-pages.js --recursive ./bin/www
-#- docker-compose exec app ./node_modules/.bin/nyc --reporter=text mocha
+- docker-compose exec app istanbul cover ./node_modules/mocha/bin/_mocha -- -- -u exports -R spec test/test-pages.js
 #- docker-compose exec app codecov
