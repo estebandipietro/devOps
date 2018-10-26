@@ -17,4 +17,4 @@ script:
 - docker-compose exec app nyc --reporter=lcovonly --reporter=text mocha
 
 after_script:
-- docker-compose exec app codecov
+- docker-compose exec app codecov -t 94bfd256-39b3-4df6-a4ed-e637e13867b8
