@@ -4,12 +4,8 @@
  "private": true,
  "scripts": {
   "start": "node ./bin/www",
-  "test": "nyc --reporter=text mocha",
+  "test": "nyc --reporter=text mocha"
 },
- "nyc": {
-     "all": true
-  }
- ,
  "dependencies": {
   "body-parser": "~1.18.2",
   "cookie-parser": "~1.4.3",
@@ -20,5 +16,8 @@
   "monk": "~6.0.5",
   "morgan": "~1.9.0",
   "serve-favicon": "~2.4.5"
+},
+"nyc": {
+    "all": true
  }
 }
