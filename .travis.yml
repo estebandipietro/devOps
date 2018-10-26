@@ -13,8 +13,8 @@ before_script:
   - docker-compose up -d
 
 script:
-- docker-compose exec app mocha test/unit/test-pages.js
-- docker-compose exec app node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -- -u exports -R spec test/unit/test-pages.js
+#- docker-compose exec app mocha test/test-pages.js -R spec
+- docker-compose exec app nyc --reporter=lcovonly --reporter=text mocha
 
-after_sucess:
-- docker run bash <(curl -s https://codecov.io/bash)
+after_script:
+- docker-compose exec app codecov -t 94bfd256-39b3-4df6-a4ed-e637e13867b8
