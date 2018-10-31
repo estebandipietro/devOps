@@ -40,7 +40,7 @@ describe('Temperature Conversion', function() {
         assert.equal(undefined, convert.cToF(''));
       });
   });
-/*  describe('fToC', function() {
+ describe('fToC', function() {
     it('should convert -40 fahrenheit to -40 celsius', function() {
         assert.equal(-40, convert.fToC(-40));
       });
@@ -51,4 +51,4 @@ describe('Temperature Conversion', function() {
         assert.equal(undefined, convert.fToC('a'));
       });
   });
-*/});
+});
