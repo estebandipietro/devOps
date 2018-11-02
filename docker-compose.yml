@@ -8,9 +8,6 @@ services:
      dockerfile: app.dockerfile
     ports:
       - "3000:3000"
-    environment:
-      - "DB_PORT=27017"
-      - "DB_HOST=mongo"
     depends_on:
       - mongo
   mongo:
@@ -18,9 +15,6 @@ services:
     image: mongo
     volumes:
       - mongodata:/data/db
-    environment:
-      - "MONGO_INITDB_ROOT_USERNAME=esteban"
-      - "MONGO_INITDB_ROOT_PASSWORD=hola1234"
     ports:
       - "27017:27017"
 volumes:
