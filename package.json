@@ -14,7 +14,7 @@
   "jade": "~1.11.0",
   "mongodb": "~3.0.1",
   "monk": "~6.0.5",
-  "morgan": "~1.9.0",
+  "morgan": "~1.10.0",
   "serve-favicon": "~2.4.5"
 },
 "nyc": {
