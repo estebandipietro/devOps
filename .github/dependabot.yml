@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: mongodb
+    versions:
+    - 3.6.3
+  - dependency-name: monk
+    versions:
+    - 7.3.2
