@@ -1,4 +1,6 @@
-# Dockerize node.js+mongoDB app 
+# Dockerize node.js+mongoDB app
+
+Proyect to learn docker and some other devops tools
 
 ## Author
 Esteban di Pietro 
